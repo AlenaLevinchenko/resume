@@ -1,0 +1,77 @@
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 360px;
+    width: 248px;
+    background: var(--color-background-secondary);
+    background-size: contain;
+    border-radius: 6px;
+    transition: all 0.8s;
+    overflow: hidden;
+}
+
+.card__icon {
+    margin-top: 16px;
+    transform: scale(500%);
+    opacity: 0.2;
+    transition: opacity 0.5s;
+    color: var(--color-accent);
+}
+
+.card:not(.card--selected):hover .card__icon {
+    opacity: 0.4;
+}
+
+.card__container:hover > .card {
+    box-shadow: 0 0 16px 2px var(--color-accent);
+    cursor: pointer;
+    animation: choose 3.5s infinite;
+    transform: scale(102%);
+}
+
+.card--light {
+    position: absolute;
+    top: 0;
+    width: 250%;
+    transform: rotate(16deg) translate(-24px, -180px);
+    height: 200px;
+    background: linear-gradient(rgba(97, 218, 251, 0) 10%, rgba(97, 218, 251, 0.2) 50%, rgba(97, 218, 251, 0) 90%);
+    animation: light 1.2s ease-in-out;
+}
+
+.card__container + .card__container {
+    margin-left: 48px;
+}
+
+.card--selected {
+    box-shadow: 0 0 16px 2px var(--color-accent);
+    animation: choose 3.5s infinite;
+    transform: scale(102%);
+}
+
+.card--selected .card__icon {
+    opacity: 0.6;
+}
+
+@keyframes choose {
+    0% {
+        transform: translate(0, -24px);
+    }
+    50% {
+        transform: translate(0, -32px);
+    }
+    100% {
+        transform: translate(0, -24px);
+    }
+}
+
+@keyframes light {
+    0% {
+        transform: rotate(16deg) translate(-24px, -180px);
+    }
+    100% {
+        transform: rotate(16deg) translate(-24px, 400px);
+    }
+}

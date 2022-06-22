@@ -1,0 +1,19 @@
+.page {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100vw - 64px);
+    height: 100vh;
+    padding: 0 32px;
+}
+
+.page:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: var(--color-main);
+    opacity: 0.1;
+}

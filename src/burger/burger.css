@@ -1,0 +1,56 @@
+.burger {
+    position: fixed;
+    left: 16px;
+    top: 18px;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    opacity: 0;
+    transform: translate(0, 0);
+    transition: opacity 0.3s, transform 0.4s ease-out 0.2s;
+    pointer-events: none;
+    z-index: 201;
+}
+
+.burger--show {
+    cursor: pointer;
+    pointer-events: all;
+    opacity: 0.7;
+}
+
+.burger--show:hover {
+    opacity: 0.9;
+}
+
+.burger::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: -11px;
+    height: 48px;
+    width: 48px;
+}
+
+.burger--opened {
+    transform: translate(256px, 0);
+}
+
+.burger__bar {
+    width: 28px;
+    height: 3px;
+    margin: 6px 0;
+    transition: 0.4s;
+    background: var(--color-main);
+}
+
+.burger--opened .burger__bar--1 {
+    transform: rotate(-45deg) translate(-3px, 6px);
+}
+
+.burger--opened .burger__bar--2 {
+    opacity: 0;
+}
+
+.burger--opened .burger__bar--3 {
+    transform: rotate(45deg) translate(-7px, -10px);
+}

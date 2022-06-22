@@ -1,0 +1,35 @@
+.experience {
+    flex-wrap: wrap;
+    padding-top: 48px;
+}
+
+.experience__line {
+    display: flex;
+}
+
+.experience__line__from {
+    width: 32px;
+}
+
+.experience__line__content {
+    padding-left: 16px;
+    border-left: 1px solid var(--color-main);
+}
+
+.experience__line__content__title {
+    font-weight: 600;
+}
+
+.experience__line__dot {
+    height: 8px;
+    width: 8px;
+    margin: 22px -5.5px 0 16px;
+    border-radius: 50%;
+    background: var(--color-main);
+}
+
+.experience__line__time-line {
+    width: 1px;
+    height: 100%;
+    background: var(--color-main);
+}

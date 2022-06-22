@@ -1,0 +1,62 @@
+.switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    width: 54px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.switch:hover {
+    cursor: pointer;
+}
+
+.switch__inner {
+    position: absolute;
+    left: 4px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    transition: background-color 0.4s, transform 0.5s ease-in-out;
+    z-index: 10;
+}
+
+.switch:hover .switch__inner {
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 20;
+}
+
+.switch__inner__bg {
+    position: absolute;
+    left: 4px;
+    height: 24px;
+    border-radius: 24px;
+    background: var(--color-main);
+    transition: opacity 0.3s, width 0.7s;
+    width: 30%;
+    pointer-events: none;
+}
+
+.switch__icon {
+    position: absolute;
+    opacity: 0.6;
+    pointer-events: none;
+    top: 8px;
+    transition: opacity 0.4s;
+    z-index: 1;
+    transform: scale(90%);
+}
+
+.switch__icon--left {
+    left: 10px;
+    color: var(--color-background);
+}
+
+.switch__icon--right {
+    right: 10px;
+    color: var(--color-main);
+}

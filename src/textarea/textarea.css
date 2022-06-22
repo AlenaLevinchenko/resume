@@ -1,0 +1,81 @@
+.textarea__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 176px;
+}
+
+.textarea__container + .textarea__container {
+    margin-top: 16px;
+}
+
+.textarea {
+    padding: 4px 12px 8px 36px;
+    font-family: var(--font);
+    font-weight: 600;
+    color: var(--color-background-secondary);
+    border: none;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.95);
+    resize: none;
+    border-top: 32px solid transparent;
+}
+
+.textarea:hover,
+.textarea:focus {
+    cursor: pointer;
+    background: #fff;
+}
+
+.textarea:not(.textarea--error):hover {
+    box-shadow: 0 0 8px 2px rgba(97, 218, 251, 0.5);
+}
+
+.textarea--error {
+    box-shadow: 0 0 8px 2px var(--color-light-red);
+}
+
+.textarea:not(.textarea--error):focus {
+    outline: none;
+    box-shadow: 0 0 8px 2px var(--color-accent);
+}
+
+.textarea__label {
+    position: absolute;
+    top: 12px;
+    left: 36px;
+    margin: 0;
+    color: var(--color-background-secondary);
+    font-weight: 600;
+    font-size: 9pt;
+    text-transform: uppercase;
+    opacity: 0.6;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+.textarea:focus ~ .textarea__label,
+.textarea:valid ~ .textarea__label {
+    opacity: 1;
+}
+
+.textarea--error ~ .textarea__label {
+    opacity: 0.9;
+    color: var(--color-red);
+}
+
+textarea--error:valid ~ .textarea__label {
+    color: var(--color-red);
+}
+
+.textarea__icon {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: var(--color-background-secondary);
+    pointer-events: none;
+}
+
+.textarea--error ~ .textarea__icon {
+    color: var(--color-red);
+}

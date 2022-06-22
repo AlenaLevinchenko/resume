@@ -1,0 +1,85 @@
+.input__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 176px;
+}
+
+.input__container + .input__container {
+    margin-top: 16px;
+}
+
+.input {
+    padding: 18px 8px 6px 36px;
+    font-family: var(--font);
+    font-weight: 600;
+    color: var(--color-background-secondary);
+    border: none;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.input:hover,
+.input:focus {
+    cursor: pointer;
+    background: #fff;
+}
+
+.input:not(.input--error):hover {
+    box-shadow: 0 0 8px 2px rgba(97, 218, 251, 0.5);
+}
+
+.input:not(.input--error):focus {
+    box-shadow: 0 0 8px 2px var(--color-accent);
+    background: #fff;
+}
+
+.input--error {
+    box-shadow: 0 0 8px 2px var(--color-light-red);
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input__label {
+    position: absolute;
+    top: 12px;
+    left: 36px;
+    margin: 0;
+    color: var(--color-background-secondary);
+    font-weight: 600;
+    font-size: 9pt;
+    text-transform: uppercase;
+    opacity: 0.6;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+.input:focus ~ .input__label,
+.input:valid ~ .input__label {
+    font-size: 6pt;
+    opacity: 1;
+    transform: translate(0, -5px);
+}
+
+.input--error ~ .input__label {
+    opacity: 0.9;
+    color: var(--color-red);
+}
+
+input--error:valid ~ .input__label {
+    color: var(--color-red);
+}
+
+.input__icon {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: var(--color-background-secondary);
+    pointer-events: none;
+}
+
+.input--error ~ .input__icon {
+    color: var(--color-red);
+}

@@ -1,0 +1,31 @@
+.app__up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    height: 32px;
+    width: 32px;
+    color: var(--color-main);
+    border: 2px solid var(--color-main);
+    border-radius: 50%;
+    opacity: 0.7;
+    transform: scale(130%);
+    z-index: 150;
+    animation: up-opacity 0.5s;
+}
+
+.app__up:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+@keyframes up-opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.7;
+    }
+}

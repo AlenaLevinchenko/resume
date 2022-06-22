@@ -1,0 +1,32 @@
+.content-box {
+    padding: 40px;
+    border-radius: 6px;
+    position: relative;
+    min-width: 320px;
+    color: var(--color-main);
+    background: var(--color-background-secondary);
+    margin: 16px;
+}
+
+.content-box__title {
+    position: absolute;
+    top: -32px;
+    left: 24px;
+    font-size: 16pt;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.content-box__icon {
+    position: absolute;
+    right: 32px;
+    bottom: 24px;
+    transform: scale(250%);
+    opacity: 0.3;
+    transition: opacity 0.5s;
+    color: var(--color-accent);
+}
+
+.content-box:hover .content-box__icon{
+    opacity: 0.6;
+}
