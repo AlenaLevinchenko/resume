@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/AlenaLevinchenko/resume/static/css/main.a04d44a2.css",
+    "main.js": "/AlenaLevinchenko/resume/static/js/main.3e927408.js",
+    "static/media/avatar.jpg": "/AlenaLevinchenko/resume/static/media/avatar.47958b1e96e72415b7b7.jpg",
+    "static/media/logo.png": "/AlenaLevinchenko/resume/static/media/logo.6d719e63d5859db0e67d.png",
+    "static/media/logo_dark.png": "/AlenaLevinchenko/resume/static/media/logo_dark.254f391909fda272838c.png",
+    "index.html": "/AlenaLevinchenko/resume/index.html",
+    "main.a04d44a2.css.map": "/AlenaLevinchenko/resume/static/css/main.a04d44a2.css.map",
+    "main.3e927408.js.map": "/AlenaLevinchenko/resume/static/js/main.3e927408.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a04d44a2.css",
+    "static/js/main.3e927408.js"
+  ]
+}
