@@ -50,19 +50,6 @@ export const Tooltip = ({
                 const target = e.target;
                 if (target.classList.contains(ignoreClasses[i])) {
                     hideTip();
-                    const onMouseLeave = () => {
-                        setTimeout(() => {
-                            const elements = document.querySelectorAll(':hover') as any;
-                            if (elements[elements.length - 1] === ref.current) {
-                                showTip();
-                                const tooltips = document.querySelectorAll('.' + CLASS_TOOLTIP);
-                                for (let i = 0; i < tooltips.length; i++) {
-                                    const tooltip = tooltips[i] as HTMLElement;
-                                }
-                            }
-                        }, 250);
-                    }
-                    target.addEventListener('mouseleave', onMouseLeave);
                     return;
                 }
             }
