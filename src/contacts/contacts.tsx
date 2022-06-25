@@ -25,7 +25,10 @@ import {
     PHONE,
     PHONE_LABEL,
     PHONE_LINK,
-    SEND, TOOLTIP_CALL, TOOLTIP_COPY, TOOLTIP_EMAIL
+    SEND,
+    TOOLTIP_CALL,
+    TOOLTIP_COPY,
+    TOOLTIP_EMAIL
 } from "./contants";
 import { ContentBox } from "../contentBox/contentBox";
 import { Input } from "../input/input";

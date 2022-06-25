@@ -1,6 +1,6 @@
 import './tooltip.css';
-import { CLASS_SNACKBAR, CLASS_TOOLTIP } from "../constants";
-import { useEffect, useRef, useState } from "react";
+import { CLASS_TOOLTIP } from "../constants";
+import { useRef, useState } from "react";
 
 interface ITooltipProps {
     text: any;
@@ -27,7 +27,6 @@ export const Tooltip = ({
     const [active, setActive] = useState(false);
     const ref = useRef(null) as any;
     let timeout: any;
-    const tooltip = document.querySelector('.' + CLASS_SNACKBAR) as HTMLElement;
 
     const hideTip = () => {
         clearInterval(timeout);
@@ -35,6 +34,11 @@ export const Tooltip = ({
     };
 
     const showTip = () => {
+        const tooltips = document.querySelectorAll('.' + CLASS_TOOLTIP);
+        for (let i = 0; i < tooltips.length; i++) {
+            const tooltip = tooltips[i] as HTMLElement;
+            tooltip.style.display = 'none';
+        }
         timeout = setTimeout(() => {
             setActive(true);
         }, 400);
@@ -49,9 +53,11 @@ export const Tooltip = ({
                     const onMouseLeave = () => {
                         setTimeout(() => {
                             const elements = document.querySelectorAll(':hover') as any;
-                            for (let idx in elements) {
-                                if (elements[idx] === ref.current) {
-                                    showTip();
+                            if (elements[elements.length - 1] === ref.current) {
+                                showTip();
+                                const tooltips = document.querySelectorAll('.' + CLASS_TOOLTIP);
+                                for (let i = 0; i < tooltips.length; i++) {
+                                    const tooltip = tooltips[i] as HTMLElement;
                                 }
                             }
                         }, 250);
@@ -65,7 +71,7 @@ export const Tooltip = ({
 
     if (!text) {
         return children;
-    };
+    }
 
     return (
         <div
