@@ -7,7 +7,8 @@ import { Pages } from "../pages/pages";
 import { Loader } from "../loader/loader";
 import { Tooltip } from "../tooltip/tooltip";
 import { TOOLTIP_UP } from "./constants";
-import { ETheme, setTheme } from "../utils/setTheme";
+import { setTheme } from "../utils/setTheme";
+import { getTheme } from "../utils/getTheme";
 
 export const App = () => {
     const classUp = CLASS_APP + '__up';
@@ -35,12 +36,8 @@ export const App = () => {
     }, []);
 
     useEffect(() => {
-        const theme = localStorage.getItem('theme');
-
-        if (theme) {
-            //@ts-ignore
-            setTheme(theme);
-        }
+        const theme = getTheme();
+        setTheme(theme);
     }, []);
 
     return (

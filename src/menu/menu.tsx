@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import { Burger } from "../burger/burger";
 import { CHOOSE_THEME, IGNORE_CLASSES, MENU } from "./constants";
 import { SwitchButton } from "../switch/switch";
-import { ETheme, setTheme } from "../utils/setTheme";
+import { setTheme } from "../utils/setTheme";
+import { getTheme } from "../utils/getTheme";
 
 interface IMenuProps {
     burger: boolean;
@@ -27,12 +28,12 @@ export const Menu = ({
     const [opened, setOpened] = useState(false);
 
     const onSwitch = () => {
-        const theme = localStorage.getItem('theme') || ETheme.DARK;
+        const theme = getTheme();
 
-        if (theme === ETheme.DARK) {
-            setTheme(ETheme.LIGHT);
+        if (theme === 'dark') {
+            setTheme('light');
         } else {
-            setTheme(ETheme.DARK);
+            setTheme('dark');
         }
     };
 

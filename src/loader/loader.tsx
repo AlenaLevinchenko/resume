@@ -5,15 +5,14 @@ import logo from '../images/logo.png';
 // @ts-ignore
 import logo_dark from '../images/logo_dark.png';
 import { useEffect } from "react";
-import { ETheme } from "../utils/setTheme";
+import { getTheme } from "../utils/getTheme";
 
 export const Loader = () => {
     const classContainer = CLASS_LOADER + '__container';
     const classLogo = CLASS_LOADER + '__logo';
     const classBlocker = classLogo + '__blocker';
 
-    const theme = localStorage.getItem('theme');
-    const darkTheme = theme === ETheme.DARK
+    const theme = getTheme();
 
     useEffect(() => {
         const bg = document.querySelector('.' + CLASS_LOADER) as HTMLElement;
@@ -30,7 +29,7 @@ export const Loader = () => {
     return (
         <div className={CLASS_LOADER}>
             <div className={classContainer}>
-                <img src={darkTheme ? logo : logo_dark} className={classLogo} />
+                <img src={theme === 'light' ? logo_dark : logo} className={classLogo} />
                 <div className={classBlocker} />
             </div>
         </div>

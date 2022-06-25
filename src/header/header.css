@@ -8,7 +8,7 @@
     background: var(--color-background-secondary);
     transition: transform 0.3s;
     z-index: 90;
-    box-shadow: 0 2px 8px var(--color-background);
+    box-shadow: 0 2px 8px var(--color-header-shadow);
     transform: translate(0, -304px);
     animation: slide 1.8s ease-out 1s;
 }

@@ -15,7 +15,8 @@ export const Card = ({
 }: ICardProps) => {
     const classContainer = CLASS_CARD + '__container';
     const classIcon = CLASS_CARD + '__icon';
-    const classLight = CLASS_CARD + '--light';
+    const classOverlay = CLASS_CARD + '__overlay';
+    const classLight = classOverlay + '--light';
     const classSelected = CLASS_CARD + '--selected';
 
     const cardRef = useRef(null);
@@ -44,7 +45,7 @@ export const Card = ({
 
         if (
             light &&
-            !light.classList.length
+            light.classList.length === 1
         ) {
             light.classList.add(classLight);
             setTimeout(() => {
@@ -68,6 +69,7 @@ export const Card = ({
                 />
                 <div
                     ref={lightRef}
+                    className={classOverlay}
                 />
             </div>
         </div>

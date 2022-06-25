@@ -27,7 +27,7 @@
     left: -10%;
     width: 110%;
     height: 25%;
-    background: linear-gradient(to right, rgba(32, 35, 42, 0) 0%, rgba(32, 35, 42, 1) 10%);
+    background: linear-gradient(to right, var(--color-background-0) 0%, var(--color-background) 10%);
     transform: translate(100%, 0);
     animation: logo 1.7s ease-in-out;
 }

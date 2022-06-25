@@ -31,13 +31,13 @@
     transform: scale(102%);
 }
 
-.card--light {
+.card__overlay--light {
     position: absolute;
     top: 0;
     width: 250%;
     transform: rotate(16deg) translate(-24px, -180px);
     height: 200px;
-    background: linear-gradient(rgba(97, 218, 251, 0) 10%, rgba(97, 218, 251, 0.2) 50%, rgba(97, 218, 251, 0) 90%);
+    background: linear-gradient(var(--color-accent-0) 10%, var(--color-card-light) 50%, var(--color-accent-0) 90%);
     animation: light 1.2s ease-in-out;
 }
 

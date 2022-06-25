@@ -47,38 +47,136 @@ export const ICON_CHECK = 'fa-solid fa-check'
 export const DARK_THEME = [
     {
         label: '--color-background',
-        color: '#20232a'
+        value: '#20232a'
     },
     {
         label: '--color-background-secondary',
-        color: '#282c34'
+        value: '#282c34'
     },
     {
         label: '--color-accent',
-        color: '#61dafb'
+        value: '#61dafb'
     },
     {
         label: '--color-main',
-        color: '#fff'
+        value: '#fff'
     },
+    {
+        label: '--color-background-0',
+        value: 'rgba(32, 35, 42, 0)'
+    },
+    {
+        label: '--color-accent-0',
+        value: 'rgba(97, 218, 251, 0)'
+    },
+    {
+        label: '--color-input-items',
+        value: '#282c34'
+    },
+    {
+        label: '--color-card-light',
+        value: 'rgba(97, 218, 251, 0.2)'
+    },
+    {
+        label: '--color-header-shadow',
+        value: '#20232a'
+    },
+    {
+        label: '--color-switcher-bg',
+        value: 'rgba(255, 255, 255, 0.2)'
+    },
+    {
+        label: '--color-accent-50',
+        value: 'rgba(97, 218, 251, 0.5)'
+    },
+    {
+        label: '--color-accent-70',
+        value: 'rgba(97, 218, 251, 0.7)'
+    },
+    {
+        label: '--color-accent-80',
+        value: 'rgba(97, 218, 251, 0.8)'
+    },
+    {
+        label: '--color-button-text',
+        value: '#fff'
+    },
+    {
+        label: '--color-contact-item',
+        value: 'rgba(255, 255, 255, 0.08)'
+    },
+    {
+        label: '--color-contact-hover',
+        value: 'rgba(255, 255, 255, 0.1)'
+    }
 ];
 
 export const LIGHT_THEME = [
     {
         label: '--color-background',
-        color: '#fff'
+        value: '#fff'
     },
     {
         label: '--color-background-secondary',
-        color: '#e8e8e8'
+        value: '#e8e8e8'
     },
     {
         label: '--color-accent',
-        color: '#044242'
+        value: '#044242'
     },
     {
         label: '--color-main',
-        color: '#20232a'
+        value: '#20232a'
     },
+    {
+        label: '--color-background-0',
+        value: 'rgba(32, 35, 42, 0)'
+    },
+    {
+        label: '--color-accent-0',
+        value: 'rgba(4, 66, 66, 0)'
+    },
+    {
+        label: '--color-input-items',
+        value: '#20232a'
+    },
+    {
+        label: '--color-card-light',
+        value: 'rgba(4, 66, 66, 0.2)'
+    },
+    {
+        label: '--color-header-shadow',
+        value: 'rgba(0, 0, 0, 0.3)'
+    },
+    {
+        label: '--color-switcher-bg',
+        value: 'rgba(0, 0, 0, 0.1)'
+    },
+    {
+        label: '--color-accent-50',
+        value: 'rgba(4, 66, 66, 0.5)'
+    },
+    {
+        label: '--color-accent-70',
+        value: 'rgba(4, 66, 66, 0.7)'
+    },
+    {
+        label: '--color-accent-80',
+        value: 'rgba(4, 66, 66, 0.8)'
+    },
+    {
+        label: '--color-button-text',
+        value: '#fff'
+    },
+    {
+        label: '--color-contact-item',
+        value: 'rgba(0, 0, 0, 0.1)'
+    },
+    {
+        label: '--color-contact-hover',
+        value: 'rgba(0, 0, 0, 0.2)'
+    }
 ];
+
+
 
