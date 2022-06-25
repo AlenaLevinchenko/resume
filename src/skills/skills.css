@@ -77,7 +77,3 @@
 .skills__icon--2 {
     opacity: 0.8;
 }
-
-.skills__icon i + i {
-    margin-left: -10px;
-}

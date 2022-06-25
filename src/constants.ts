@@ -22,25 +22,26 @@ export const CLASS_PORTFOLIO = 'portfolio';
 export const CLASS_SWITCH = 'switch';
 
 //icons
-export const ICON_PERSON = 'fi fi-rs-user';
-export const ICON_PEOPLE = 'fi fi-rs-users';
-export const ICON_COMPUTER = 'fi fi-rs-computer';
-export const ICON_ARROW_RIGHT = 'fi fi-rs-angle-small-right';
-export const ICON_ARROW_LEFT = 'fi fi-rs-angle-small-left';
-export const ICON_ARROW_UP = 'fi fi-bs-angle-up';
-export const ICON_WORK = 'fi fi-rr-briefcase';
-export const ICON_EDUCATION = 'fi fi-rr-graduation-cap';
-export const ICON_COPY = 'fi fi-rs-duplicate';
-export const ICON_EMAIL = 'fi fi-rr-at';
-export const ICON_MESSAGE = 'fi fi-rs-comment-alt';
-export const ICON_SEND = 'fi fi-rs-paper-plane';
-export const ICON_LETTER = 'fi fi-rr-envelope';
-export const ICON_PHONE = '"fi fi-rr-phone-call';
-export const ICON_BUILDING = 'fi fi-rs-building';
-export const ICON_LIST = 'fi fi-rr-list';
-export const ICON_CONTACTS = 'fi fi-rs-address-book';
-export const ICON_MOON = 'fi fi-rs-moon';
-export const ICON_SUN = 'fi fi-rs-sun';
+export const ICON_PERSON = 'fa-solid fa-user';
+export const ICON_PEOPLE = 'fa-solid fa-user-group';
+export const ICON_COMPUTER = 'fa-solid fa-display';
+export const ICON_ARROW_RIGHT = 'fa-solid fa-angle-right';
+export const ICON_ARROW_LEFT = 'fa-solid fa-angle-left';
+export const ICON_ARROW_UP = 'fa-solid fa-angle-up';
+export const ICON_WORK = 'fa-solid fa-briefcase';
+export const ICON_EDUCATION = 'fa-solid fa-graduation-cap';
+export const ICON_COPY = 'fa-regular fa-copy';
+export const ICON_EMAIL = 'fa-solid fa-at';
+export const ICON_MESSAGE = 'fa-solid fa-comment-alt';
+export const ICON_SEND = 'fa-solid fa-paper-plane';
+export const ICON_LETTER = 'fa-solid fa-envelope';
+export const ICON_PHONE = 'fa-solid fa-phone';
+export const ICON_BUILDING = 'fa-solid fa-building';
+export const ICON_LIST = 'fa-solid fa-list';
+export const ICON_CONTACTS = 'fa-solid fa-address-book';
+export const ICON_MOON = 'fa-solid fa-moon';
+export const ICON_SUN = 'fa-solid fa-sun';
+export const ICON_CHECK = 'fa-solid fa-check'
 
 //theme colors
 export const DARK_THEME = [

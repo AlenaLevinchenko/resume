@@ -22,6 +22,7 @@ body {
 
 i {
     user-select: none;
+    padding-bottom: 4px;
 }
 
 .number {

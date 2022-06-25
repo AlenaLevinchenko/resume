@@ -20,7 +20,7 @@ export const ContentBox = ({
     return (
             <div className={`
                 ${CLASS_BOX}
-                ${className}
+                ${className ? className : ''}
             `}
             >
                 <p className={classTitle}>

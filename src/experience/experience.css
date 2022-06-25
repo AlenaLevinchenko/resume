@@ -1,6 +1,5 @@
 .experience {
     flex-wrap: wrap;
-    padding-top: 48px;
 }
 
 .experience__line {
@@ -32,4 +31,14 @@
     width: 1px;
     height: 100%;
     background: var(--color-main);
+}
+
+@media only screen and (max-width: 928px) {
+    .experience {
+        padding-top: 48px;
+    }
+
+    .experience .content-box + .content-box {
+        margin-top: -64px;
+    }
 }

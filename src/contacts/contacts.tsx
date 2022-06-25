@@ -2,7 +2,7 @@ import './contacts.css';
 import { Page } from "../page/page";
 import {
     CLASS_CONTACTS,
-    CLASS_NUMBER,
+    CLASS_NUMBER, ICON_CHECK,
     ICON_COPY,
     ICON_EMAIL,
     ICON_LETTER,
@@ -43,8 +43,8 @@ interface IItemProps {
     value: string;
     link?: string;
     icon?: string;
-    onClickCopy?: () => void;
     tooltip?: string;
+    onClickCopy?: () => void;
 }
 
 export const Contacts = () => {
@@ -243,8 +243,8 @@ const Item = ({
     value,
     link,
     icon,
+    tooltip,
     onClickCopy,
-    tooltip
 }: IItemProps) => {
     const className = CLASS_CONTACTS + '__item';
     const classLabel = className + '__label';
@@ -252,11 +252,15 @@ const Item = ({
     const classIcon = className + '__icon';
     const classCopy = className + '__copy';
 
+    const [showChecked, setShowChecked] = useState(false);
+
     const onCopy = (e: React.SyntheticEvent) => {
         e.preventDefault();
         navigator.clipboard.writeText(value);
         if (onClickCopy) {
+            setShowChecked(true);
             onClickCopy();
+            setTimeout(() => setShowChecked(false), 4000);
         }
     };
 
@@ -295,13 +299,23 @@ const Item = ({
                         top: '40px'
                     }}
                 >
-                    <i
-                        className={`
+                    {showChecked ?
+                        <i
+                            className={`
+                                ${classCopy}
+                                ${ICON_CHECK}
+                            `}
+                            onClick={e => e.preventDefault()}
+                        />
+                        :
+                        <i
+                            className={`
                                 ${classCopy}
                                 ${ICON_COPY}
                             `}
-                        onClick={onCopy}
-                    />
+                            onClick={onCopy}
+                        />
+                    }
                 </Tooltip>
             </a>
         </Tooltip>
