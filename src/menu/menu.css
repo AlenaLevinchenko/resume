@@ -40,8 +40,6 @@
     height: 40px;
     width: calc(100% - 56px);
     padding: 0 24px 0 32px;
-    opacity: 0.8;
-    transition: opacity 0.2s;
 }
 
 .menu__inner__link__text {
